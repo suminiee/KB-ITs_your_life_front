@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>랜덤으로 생성된 숫자를 맞춰 보세요!</h1>
+      <h1 v-if="num < answer">Up</h1>
+      <h1 v-else-if="num > answer">Down</h1>
+      <h1 v-else="num">정답!</h1>
+      숫자를 입력하세요 <input type="text" v-model.number="num" />
+    </div>
+    <script>
+      //Vue에서 createApp, ref(반응형 데이터, 값의 변화가 일어나면 뷰가 다시 화면 자체를 다시 그려줌)을 꺼내서 쓸거임.
+      const { createApp, ref } = Vue;
+
+      createApp({
+        name: 'App',
+        data() {
+          return {
+            answer: parseInt(Math.random() * 10), //0 ~ 9사이의 숫자 가져오기, 외우면 편하다
+            num: 0,
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //   sayHello();
+      //   sayHello2(); //오류발생! 아직 함수표현식까지 도달 못했는데 호출했음, 없으니까 에러남
+
+      function sayHello() {
+        console.log('hello');
+      }
+      const sayHello2 = function () {
+        console.log('hello2');
+      };
+
+      const sayHello3 = () => {
+        console.log('hello3');
+      };
+
+      sayHello();
+      sayHello2();
+      sayHello3();
+    </script>
+  </head>
+  <body></body>
+</html>

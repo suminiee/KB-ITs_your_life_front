@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+        display: inline-block;
+      }
+      .opacity {
+        background-color: aqua;
+        opacity: 1;
+      }
+      .opacity:hover {
+        opacity: 0;
+        /* 1초동안 천천히 사라짐 */
+        /* 존재하는데 눈에만 보이지 않을뿐 */
+        transition-duration: 1s;
+      }
+      .visibility {
+        background-color: greenyellow;
+        visibility: visible;
+      }
+      .visibility:hover {
+        visibility: hidden;
+      }
+
+      .display {
+        background-color: dodgerblue;
+      }
+
+      /* .display:hover {
+        ?;
+      } */
+      .last {
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="opacity">opacity</div>
+    <div class="visibility">visibility</div>
+    <div class="display">display</div>
+    <div class="last">last</div>
+  </body>
+</html>

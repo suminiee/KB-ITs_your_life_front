@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        transition-duration: 1s;
+      }
+      .orange {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">box1</div>
+
+    <script>
+      const boxEl = document.querySelector('.box');
+
+      //   function alertFunc() {
+      //     alert('click');
+      //   }
+
+      //   console.log(boxEl);
+      //   boxEl.addEventListener('click', alertFunc);
+
+      //클릭할 때 마다 변화하도록 동적으로.. jsrkwlrh
+      boxEl.addEventListener('click', function () {
+        if (boxEl.classList.contains('orange')) {
+          boxEl.classList.remove('orange');
+        } else {
+          boxEl.classList.add('orange');
+        }
+      });
+    </script>
+  </body>
+</html>

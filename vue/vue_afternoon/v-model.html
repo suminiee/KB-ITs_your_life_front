@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <!-- 속성에 무언가 설정할때 v-bind사용 -->
+
+    <div id="app">
+      <h1>{{ inputText }}</h1>
+      <input
+        type="text"
+        v-bind:value="inputText"
+        v-on:input="updateInput($event)"
+      />
+    </div>
+    <script>
+      //Vue에서 createApp, ref(반응형 데이터, 값의 변화가 일어나면 뷰가 다시 화면 자체를 다시 그려줌)을 꺼내서 쓸거임.
+      const { createApp, ref } = Vue;
+
+      createApp({
+        name: 'App',
+        data() {
+          return {
+            inputText: '인풋 태그에 값을 입력 하세요',
+          };
+        },
+        methods: {
+          updateInput(event) {
+            //사용자가 입력하고 있는 input 태그를 바로 넣어줘(한글자 쓸때마다 변경이 일어나는 것이 됨.)
+            this.inputText = event.target.value;
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h1 class="header">Hello, Protocol</h1>
+    <button onclick="fetchData()">백엔드 통신 경험하기</button>
+  </body>
+  <script>
+    const headerEl = document.querySelector('.header');
+    const endPoint =
+      'https://port-0-tetz-night-back-m5yo5gmx92cc34bc.sel4.cloudtype.app/test';
+    // 아래의 부분을 완성해 주세요!
+
+    async function fetchData() {
+      try {
+        //에러가 예상되는 코드
+        //fetch될때까지 기다려 -> await 사용
+        const response = await fetch(
+          'https://port-0-tetz-night-back-m5yo5gmx92cc34bc.sel4.cloudtype.app/test'
+        );
+        ㅋ;
+
+        const data = await response.json();
+        console.log('🚀 ~ fetchData ~ data:', data);
+        headerEl.textContent = data.message;
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    // async function fetchData() {
+    //   try {
+    //     const response = await fetch(endPoint);
+    //     if (!response.ok) {
+    //       throw new Error('오류임');
+    //     }
+    //     console.log(response);
+    //     const data = await response.json();
+    //     headerEl.textContent = data.message;
+    //   } catch (e) {
+    //     console.error('Error: ', error);
+    //     headerEl.textContent = '오류남';
+    //   }
+    // }
+  </script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS3 Position Property</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+      }
+      .box:nth-child(1) {
+        background-color: red;
+        left: 10px;
+        top: 10px;
+        z-index: 100;
+      }
+      .box:nth-child(2) {
+        background-color: green;
+        left: 50px;
+        top: 50px;
+        z-index: 10;
+      }
+      .box:nth-child(3) {
+        background-color: blue;
+        left: 90px;
+        top: 90px;
+        z-index: 1;
+      }
+      body > div {
+        width: 400px;
+        height: 100px;
+        border: 3px solid black;
+        position: relative;
+        /* 넘어간 부분(overflow)는 숨김 */
+        /* overflow: hidden; */
+        /* 넘어간 부분(overflow) 스크롤으로 만들기 */
+        overflow: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hello -->
+    <!-- 
+    1. y축으로 밀릴 것이다.
+    2. absolute니까 아래 애들은 변동이 없을 것이다 ✅
+    -->
+    <h1>Lorem ipsum dolor sit.</h1>
+    <div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+    <h1>Lorem ipsum dolor sit.</h1>
+  </body>
+</html>

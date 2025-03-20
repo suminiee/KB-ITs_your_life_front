@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 가독성이 높은 if문을 위하여 -> early return 사용
+
+      const id = 'suminiee';
+      const pw = 'password';
+
+      let inputId = prompt('아이디를 입력하세요: ');
+      let inputPw = prompt('비밀번호를 입력하세요: ');
+
+      if (inputId == id && inputPw == pw) {
+        console.log('로그인 성공');
+      } else if (inputId == id && inputPw !== pw) {
+        console.log('PW가 틀렸습니다.');
+      } else if (inputId !== id && inputPw == pw) {
+        console.log('ID가 틀렸습니다.');
+      } else {
+        console.log('망했어요');
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

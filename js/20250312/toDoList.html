@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>to do list</title>
+  </head>
+  <body>
+    <!-- <button onclick="addTodo()">할 일 추가</button> -->
+    <button id="btn">할 일 추가</button>
+    <ul id="todolist"></ul>
+
+    <script>
+      // const ulEl = document.querySelector('#todolist');
+      const ulEl = document.getElementById('todolist');
+
+      const btn = document.getElementById('btn');
+
+      btn.addEventListener('click', function () {
+        const liEl = document.createElement('li');
+        liEl.textContent = '이 닦기';
+
+        ulEl.appendChild(liEl);
+      });
+
+      //   function addTodo() {
+      //     const liEl = document.createElement('li');
+      //     liEl.textContent = '이 닦기';
+
+      //     ulEl.appendChild(liEl);
+      //   }
+    </script>
+  </body>
+</html>

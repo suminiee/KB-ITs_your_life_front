@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+    </ul>
+    <!-- 동적 js로 li 3을 만들어서 붙여보기 -->
+    <script>
+      const ulEl = document.querySelector('ul');
+
+      const liEl = document.createElement('li');
+      //<li>에 들어갈 값을 추가하기
+      liEl.textContent = '3';
+
+      //붙여주기
+      ulEl.appendChild(liEl);
+
+      //제대로 동작한다면 원래 1,2 밖에 없었는데 이젠 3까지 붙어서 나옴.
+    </script>
+  </body>
+</html>

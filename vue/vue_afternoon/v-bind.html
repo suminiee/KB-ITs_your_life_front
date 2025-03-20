@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <!-- 속성에 무언가 설정할때 v-bind사용 -->
+    <div id="app">
+      <img src="imgSrc" alt="망곰이" />
+      <img v-bind:src="imgSrc" alt="망곰이 vbind" />
+    </div>
+    <script>
+      //Vue에서 createApp, ref(반응형 데이터, 값의 변화가 일어나면 뷰가 다시 화면 자체를 다시 그려줌)을 꺼내서 쓸거임.
+      const { createApp, ref } = Vue;
+
+      createApp({
+        name: 'App',
+        data() {
+          return {
+            imgSrc:
+              'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA3MTZfNDQg%2FMDAxNjg5NDgyMTA5NDgw.yLp39UeIRQe_LiBFUVa6l1rFeb-H5vwDoLB72GsL1S8g.ugCcb1CK2pI2NJ1iCqtSzAZXL6eGu6_R_rf6A8YsVh0g.JPEG.didu22%2F1689482108491.jpg&type=sc960_832',
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CSS3 Selector Basic</title>
+    <style>
+      #header {
+        width: 800px;
+        /* 0이 위 아래 여백 (위쪽 아래쪽은 여백 주지 말고 뒤에 있는 숫자는 오른쪽 왼쪽 여백 -> auto 알아서 n등분 해라 = 좌우 여백 동일) */
+        margin: 0 auto;
+        background: red;
+      }
+      #wrap {
+        width: 800px;
+        /* 아래 마진 중앙정렬 */
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      #aside {
+        width: 200px;
+        float: left;
+        background: blue;
+      }
+      #content {
+        width: 600px;
+        float: left;
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <h1>#header 태그</h1>
+    </div>
+    <div id="wrap">
+      <div id="aside">
+        <h1>#aside 태그</h1>
+      </div>
+      <div id="content">
+        <h1>#content 태그</h1>
+      </div>
+    </div>
+  </body>
+</html>

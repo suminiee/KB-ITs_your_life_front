@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <!-- amount가 1000보다 작을때 보여줌 -->
+      <h1 v-show="amount < 1000">천원 이상 부터 입금이 가능합니다.</h1>
+      <h1 v-show="amount >= 1000">입금이 가능합니다.</h1>
+      입금액 입력 : <input type="text" v-model.number="amount" />
+    </div>
+    <script>
+      //Vue에서 createApp, ref(반응형 데이터, 값의 변화가 일어나면 뷰가 다시 화면 자체를 다시 그려줌)을 꺼내서 쓸거임.
+      const { createApp, ref } = Vue;
+
+      createApp({
+        name: 'App',
+        data() {
+          return {
+            amount: 0,
+          };
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>

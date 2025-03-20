@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div class="box">class box</div>
+    <div id="box">id box</div> -->
+
+    <!-- div{$}*7 : emmet-->
+    <!-- <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div> -->
+    <button id="btn">클릭</button>
+
+    <script>
+      //   const boxEl = document.querySelector('.box');
+      //<div class="box">class box</div>
+      //   const boxEl = document.getElementById('box');
+      //<div id="box">id box</div>
+      //   console.log(boxEl);
+
+      //여러개를 선택해야할 때 -> querySelectorAll(선택하려는 태그);
+      //   const boxEls = document.querySelectorAll('div');
+      //control + option + L 누르면 console log 알아서 찍어줌
+      //   console.log("🚀 ~ boxEls:", boxEls)
+      function test() {
+        alert('TEST');
+      }
+
+      const btnE1 = document.querySelector('#btn');
+
+      //클릭이 일어나면 두번째 매개 값을 실행시켜 주세요.
+      // = 클릭이 일어나면 test함수를 실행시켜 주세요.
+      //   btnE1.addEventListener('click', test);
+
+      //익명함수
+      //   btn.addEventListener('click', function () {
+      //     alert('test');
+      //   });
+
+      //   함수에게 함수를 전달 -> 콜백함수 / 비동기를 쓰려면 콜백함수를 써야함.
+      //화살표함수
+      btn.addEventListener('click', () => {
+        alert('test');
+      });
+
+      //onclick이 있을때랑 정확하게 같게 동작함.
+    </script>
+  </body>
+</html>
