@@ -3,5 +3,6 @@
   "editor.formatOnSave": true,
   "prettier.singleQuote": true,
   "editor.inlayHints.fontFamily": "",
-  "editor.fontFamily": "d2coding, Menlo, Monaco, 'Courier New', monospace"
+  "editor.fontFamily": "d2coding, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 13
 }
