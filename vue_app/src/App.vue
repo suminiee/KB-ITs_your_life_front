@@ -1,15 +1,19 @@
 <!-- js관련 -->
 <script setup>
-import ColorEmit from './components/ColorEmit.vue';
+import ScopedSlotParent from './components/ScopedSlotParent.vue';
+import ModalParent from './components/ModalParent.vue';
+import TeleportDemo from './components/TeleportDemo.vue';
+import CustomInputParent from './components/CustomInputParent.vue';
+import ProvideComponent from './components/ProvideComponent.vue';
 </script>
 
 <!-- html 관련 -->
 <template>
   <div>
-    <div :style="{ backgroundColor: color }">
-      <h1>저의 색상을 정해주세요!!</h1>
-      <ColorEmit @colorChange="colorChangeHandler" />
-    </div>
+    <!-- <ModalParent /> -->
+    <!-- <TeleportDemo /> -->
+    <!-- <CustomInputParent /> -->
+    <ProvideComponent />
   </div>
 </template>
 
@@ -18,13 +22,8 @@ export default {
   name: 'App',
   data() {
     return {
-      color: '',
+      drilling: '으아아~~ 어디까지 내려가는거에요',
     };
-  },
-  methods: {
-    colorChangeHandler(e) {
-      this.color = e.color;
-    },
   },
 };
 </script>
