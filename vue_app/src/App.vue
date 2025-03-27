@@ -1,10 +1,10 @@
 <!-- js관련 -->
 <script setup>
-import ScopedSlotParent from './components/ScopedSlotParent.vue';
-import ModalParent from './components/ModalParent.vue';
-import TeleportDemo from './components/TeleportDemo.vue';
-import CustomInputParent from './components/CustomInputParent.vue';
-import ProvideComponent from './components/ProvideComponent.vue';
+import RefReactive from './components/composition-api/RefReactive.vue';
+import Counter from './components/composition-api/Counter.vue';
+import PropsParent from './components/composition-api/PropsParent.vue';
+import EmitParent from './components/composition-api/EmitParent.vue';
+import QuizParent from './components/composition-api/QuizParent.vue';
 </script>
 
 <!-- html 관련 -->
@@ -13,7 +13,12 @@ import ProvideComponent from './components/ProvideComponent.vue';
     <!-- <ModalParent /> -->
     <!-- <TeleportDemo /> -->
     <!-- <CustomInputParent /> -->
-    <ProvideComponent />
+    <!-- <ProvideComponent /> -->
+    <!-- <RefReactive /> -->
+    <!-- <Counter /> -->
+    <!-- <PropsParent /> -->
+    <!-- <EmitParent /> -->
+    <QuizParent />
   </div>
 </template>
 
@@ -21,9 +26,7 @@ import ProvideComponent from './components/ProvideComponent.vue';
 export default {
   name: 'App',
   data() {
-    return {
-      drilling: '으아아~~ 어디까지 내려가는거에요',
-    };
+    return {};
   },
 };
 </script>
