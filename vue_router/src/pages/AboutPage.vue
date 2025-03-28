@@ -1,0 +1,9 @@
+<template>
+  <div>
+    <h1>아잠만</h1>
+    <img
+      src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMDRfMjg0%2FMDAxNjA0NDY5MTM3MTI0.tBahR7tUui_8DcXEpROWPJmfQunMZ4YaSVJCffl_1Jsg.hJrgn5zZoOESrbN9gR07mtjE79vkc13OQPRUcXCh50wg.JPEG.sarah9812%2FIMG_9792.JPG&type=sc960_832"
+      alt="아잠만"
+    />
+  </div>
+</template>
