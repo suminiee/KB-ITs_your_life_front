@@ -26,6 +26,16 @@ const router = createRouter({
       component: () => import('@/pages/UserPage.vue'),
     },
     {
+      path: '/cors',
+      name: 'cors',
+      component: () => import('@/pages/CorsPage.vue'),
+    },
+    {
+      path: '/ex-cors',
+      name: 'ex-cors',
+      component: () => import('@/pages/CorsExPage.vue'),
+    },
+    {
       //위에서 다 봤는데도 없다 -> 그 모든 예외 전체를 처리해줌
       path: '/:pathMatch(.*)*',
       name: 'notfound',

@@ -14,6 +14,10 @@ const router = useRouter(); //useRouter는 어디로 보낼지 설정하는거�
       <RouterLink to="/dynamic/happy">Happy</RouterLink>
       /
       <RouterLink to="/dynamic/exciting">Exciting</RouterLink>
+      /
+      <RouterLink to="/cors">Cors</RouterLink>
+      /
+      <RouterLink to="/ex-cors">Cors EX</RouterLink>
     </nav>
     <div>
       <RouterLink to="/user/1">User1</RouterLink>
