@@ -5,8 +5,14 @@
       <h2>todo : <input type="text" v-model.trim="editedTodo" /></h2>
       <h2>desc : <input type="text" v-model.trim="editedDesc" /></h2>
       <h2>done: <input type="checkbox" v-model="editedDone" /></h2>
-      <button @click="editedTodo(todoObj.id)">수정</button>
-      <button>취소</button>
+      <button @click="editTodo(todoObj.id)">수정</button>
+      <button
+        @click="
+          router.push({ name: 'todo/detail', params: { id: todoObj.id } })
+        "
+      >
+        취소
+      </button>
     </div>
   </div>
 </template>
@@ -15,6 +21,8 @@
 import axios from 'axios';
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+
+const router = useRouter();
 
 //현재 Id를 받아와야함!!
 const curRoute = useRoute();
@@ -46,12 +54,26 @@ async function fetchTodo() {
 }
 fetchTodo();
 
-async function editTodo(id) {
-  try {
-  } catch (error) {}
-}
+// const todo = ref(todoObj.value.todo);
 
-const todo = ref(todoObj.value.todo);
+async function editTodo(id) {
+  const todoUrl = BASE_URL + `/todos/${id}`;
+  try {
+    const editedTodoList = {
+      todo: editedTodo.value,
+      desc: editedDesc.value,
+      done: editedDone.value,
+    };
+
+    const editTodoRes = await axios.put(todoUrl, editedTodoList);
+
+    console.log('TODO EDIT 통신 결과 : ', editTodoRes);
+
+    router.push({ name: 'todo' });
+  } catch (e) {
+    console.log(e);
+  }
+}
 </script>
 
 <style lang="scss" scoped></style>
