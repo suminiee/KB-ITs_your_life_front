@@ -23,6 +23,12 @@
       "todo": "코테 정복",
       "desc": "취업용 코테 까지만 퐈이팅!!",
       "done": false
+    },
+    {
+      "id": "1a7f",
+      "todo": "ㅇㅇㅇ",
+      "desc": "ㅇㅇㅇ",
+      "done": false
     }
   ],
   "users": [
