@@ -48,6 +48,16 @@ const router = createRouter({
       meta: { requiresAuth: true },
       props: true,
     },
+    {
+      path: '/pinia',
+      name: 'pinia',
+      component: () => import('@/pages/pinia/PiniaPage.vue'),
+    },
+    {
+      path: '/pinia/message',
+      name: 'pinia/message',
+      component: () => import('@/pages/pinia/PiniaMessagePage.vue'),
+    },
   ],
 });
 
